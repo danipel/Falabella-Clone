@@ -85,23 +85,23 @@ exports.login = login;
 const register = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { name, lastname, email, id_type, id_number, phone, password } = req.body;
-        // 🔹 Verificar que todos los campos estén presentes
+        // Verificar que todos los campos estén presentes
         if (!name || !lastname || !email || !id_type || !id_number || !phone || !password) {
             return res.status(400).json({ message: "All fields are required" });
         }
-        // 🔹 Verificar si el email ya está registrado
+        // Verificar si el email ya está registrado
         const existingUserEmail = yield user_1.User.findOne({ where: { email } });
         if (existingUserEmail) {
             return res.status(400).json({ message: "Email already exists" });
         }
-        // 🔹 Verificar si el telefono ya está registrado
+        // Verificar si el telefono ya está registrado
         const existingUserPhone = yield user_1.User.findOne({ where: { phone } });
         if (existingUserPhone) {
             return res.status(400).json({ message: "Phone already exists" });
         }
-        // 🔹 Hashear la contraseña
+        // Hashear la contraseña
         const hashed_password = yield bcrypt.hash(password, 10);
-        // 🔹 Crear y guardar usuario
+        // Crear y guardar usuario
         const user = user_1.User.create({
             name,
             lastname,
@@ -112,7 +112,7 @@ const register = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
             password: hashed_password
         });
         yield user.save();
-        // 🔹 Retornamos datos del usuario
+        // Retornamos datos del usuario
         return res.status(201).json({
             message: "User created successfully",
             user: {

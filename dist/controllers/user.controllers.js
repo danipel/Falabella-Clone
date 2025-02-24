@@ -19,7 +19,7 @@ const get_user_profile = (req, res) => __awaiter(void 0, void 0, void 0, functio
             return res.status(404).json({ message: "User not found" });
         }
         return res.json({
-            id: user.user_id,
+            user_id: user.user_id,
             name: user.name,
             lastname: user.lastname,
             email: user.email,
