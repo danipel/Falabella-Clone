@@ -11,9 +11,9 @@ Este proyecto fue creado con el propósito de replicar las características esen
 - **Frontend:**
   - HTML5
   - CSS3 (Flexbox, Grid)
-  - JavaScript (React.js / Vanilla JS)
   - TypeScript
-  - Bootstrap (opcional si usas un framework CSS)
+  - NextJS
+  - TailwindCSS
   - APIs (para el carrito de compras y productos)
   
 - **Backend:**
