@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Falabella clone (frontend)
 
-## Getting Started
+## Primeros Pasos
 
-First, run the development server:
+Este documento te guiará por los pasos necesarios para configurar tu entorno de desarrollo local.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Requisitos Previos
+
+- Node.js (versión recomendada: 16.x o superior)
+- Docker y Docker Compose
+- Git
+
+## Instalación y Configuración
+
+### 1. Clonar el repositorio
+
+```
+https://github.com/danipel/falabella-clone.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Instalar dependencia de node
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+# Navega al directorio del proyecto
+cd proyecto-frontend
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Instala las dependencias
+npm install
+```
 
-## Learn More
+### 3. Levantar el entorno con Docker
 
-To learn more about Next.js, take a look at the following resources:
+```
+# Construir el contenedor
+docker compose build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+# Ejecutar el contenedor
+docker compose up
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 4. Acceder al localhost
 
-## Deploy on Vercel
+```
+# El puerto puede ser cambiado en caso de que este ejecutando algo alli
+http://localhost:3000
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Arquitectura de carpetas
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Se sigue una arquitectura modular basada en componentes:
+
+```
+
+├── components/
+  ├── shared/               # Componentes reutilizables
+  │   ├── navbar/           # Componentes relacionados con la barra de navegación
+  │   │   ├── NavBar.tsx    # Componente principal
+  │   │   ├── NavItem.tsx   # Elemento individual de navegación
+  │   │   └── NavMenu.tsx   # Menú desplegable
+  │   └── shopping-cart     # Componentes relacionados con el carrito de compras
+  ├── action/               # Acciones del lado del servidor
+  ├── hooks/                # Custom hooks
+  ├── services/             # Servicios y API calls
+  ├── lib/                  # Utilidades y funciones auxiliares
+  ├── assets/               # Recursos estáticos (imágenes, fuentes, etc.)
+  └── store/               # Manejo del estado global
+```
+
+## reación de Nuevos Componentes
+
+Al crear nuevos componentes, mantén la misma estructura organizativa:
+
+1. Crea una carpeta con el nombre del componente dentro de components/
+2. Dentro de esta carpeta, coloca todos los componentes relacionados
