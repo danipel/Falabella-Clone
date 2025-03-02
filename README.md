@@ -21,6 +21,9 @@ https://github.com/danipel/falabella-clone.git
 ### 2. Acceder a la rama fronted y crear rama local
 
 ```
+# Navega al directorio del proyecto
+cd proyecto-frontend
+
 git checkout frontend
 git checkout -b mi-espacio-de trabajo
 ```
@@ -28,9 +31,6 @@ git checkout -b mi-espacio-de trabajo
 ### 3. Instalar dependencia de node
 
 ```
-# Navega al directorio del proyecto
-cd proyecto-frontend
-
 # Instala las dependencias
 npm install
 ```
@@ -79,7 +79,7 @@ Se sigue una arquitectura modular basada en componentes:
   └── store/               # Manejo del estado global
 ```
 
-## reación de Nuevos Componentes
+## Creación de Nuevos Componentes
 
 Al crear nuevos componentes, mantén la misma estructura organizativa:
 
