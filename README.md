@@ -18,7 +18,14 @@ Este documento te guiará por los pasos necesarios para configurar tu entorno de
 https://github.com/danipel/falabella-clone.git
 ```
 
-### 2. Instalar dependencia de node
+### 2. Acceder a la rama fronted y crear rama local
+
+```
+git checkout frontend
+git checkout -b mi-espacio-de trabajo
+```
+
+### 3. Instalar dependencia de node
 
 ```
 # Navega al directorio del proyecto
@@ -28,7 +35,7 @@ cd proyecto-frontend
 npm install
 ```
 
-### 3. Levantar el entorno con Docker
+### 4. Levantar el entorno con Docker
 
 ```
 # Construir el contenedor
@@ -40,12 +47,16 @@ docker compose build
 docker compose up
 ```
 
-### 4. Acceder al localhost
+### 5. Acceder al localhost
 
 ```
 # El puerto puede ser cambiado en caso de que este ejecutando algo alli
 http://localhost:3000
 ```
+
+### Nota final
+
+Si todos los cambios funcionan y no rompen la aplicacion, pasar los cambios de la rama local creada a la frontend.
 
 ## Arquitectura de carpetas
 
