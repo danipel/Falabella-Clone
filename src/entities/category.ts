@@ -2,19 +2,14 @@ import {
     Entity,
     PrimaryGeneratedColumn,
     Column,
-    ManyToOne,
-    BaseEntity
+    BaseEntity,
 } from "typeorm";
-import { Section } from "./section";
 
 @Entity()
 export class Category extends BaseEntity {
     @PrimaryGeneratedColumn()
     id_category: number;
 
-    @Column({ unique: true })
-    name: string;
-
-    @ManyToOne(() => Section, { onDelete: "CASCADE" })
-    section: Section;
+    @Column({ unique : true })
+    name_category: string;
 }

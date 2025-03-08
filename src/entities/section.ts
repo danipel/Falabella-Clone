@@ -10,6 +10,6 @@ export class Section extends BaseEntity {
     @PrimaryGeneratedColumn()
     id_section: number;
 
-    @Column({ unique: true })
-    name: string;
+    @Column({ unique : true })
+    name_section: string;
 }
