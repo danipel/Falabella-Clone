@@ -38,5 +38,5 @@ export class User extends BaseEntity {
     create_at : Date
 
     @UpdateDateColumn()
-    updated_ad : Date
+    updated_at : Date
 }
