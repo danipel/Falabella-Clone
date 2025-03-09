@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
-import "./globals.css";
-import { Header } from "@/components/shared/header/Header";
 import { Footer } from "@/components/shared/Footer";
+import { Header } from "@/components/shared/header/Header";
+import { LoginForm } from "@/components/auth/login/LoginForm";
 import { Sidebar } from "@/components/shared/sidebar/Sidebar";
+import "./globals.css";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -24,10 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${lato.variable} font-sans antialiased flex space-between flex-col min-h-screen`}
+        className={`${lato.variable} font-sans antialiased flex space-between flex-col min-h-screen overflow-x-hidden`}
       >
         <Header />
         <Sidebar />
+        <LoginForm />
         {children}
         <Footer />
       </body>

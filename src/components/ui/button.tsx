@@ -16,6 +16,8 @@ const buttonVariants = cva(
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        register: "w-full max-w-[343px]",
+        login: "bg-icon-background text-primary-foreground w-full",
       },
       size: {
         default: "h-10 px-4 py-2",

@@ -35,7 +35,7 @@ export const StickyHeader: React.FC<StickyHeaderProps> = ({ children }) => {
       className={`
           fixed top-0 left-0 w-full z-5 transition-transform duration-300
           ${visible ? "transform-none" : "transform -translate-y-full"}
-          ${atTop ? "relative" : "sticky bg-white shadow-md"}
+          ${atTop ? "relative" : "sticky bg-white shadow-md z-10"}
         `}
     >
       {children}

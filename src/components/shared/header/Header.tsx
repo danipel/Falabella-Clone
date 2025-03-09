@@ -1,5 +1,4 @@
 import { HeaderLinks } from "./HeaderLinks";
-import { StickyHeader } from "./header-navbar/StickyHeader";
 import { Navbar } from "./header-navbar/Navbar";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
@@ -43,12 +42,10 @@ export const Header = () => {
         ))}
       </div>
 
-      <StickyHeader>
-        <Navbar />
-      </StickyHeader>
+      <Navbar />
 
       <div className="flex flex-row-reverse items-center justify-start h-[50px]">
-        <div className="flex text-[14px] leading-[17px] text-primary items-center cursor cursor-pointer mr-2 xl:mr-16">
+        <div className="flex text-[14px] leading-[17px] text-primary items-center cursor cursor-pointer mr-2  xl:mr-16">
           <Link href="#" className="ml-6 max-sm:w-[90px]">
             Vende en falabella.com
           </Link>

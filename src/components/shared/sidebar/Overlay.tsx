@@ -10,7 +10,7 @@ export const Overlay = () => {
     <>
       {isSidebarOpen && (
         <div
-          className="fixed w-full h-full bg-black/70 z-8"
+          className="fixed w-full h-full bg-[#4A4A4A80] z-8"
           onClick={closeSidebar}
         />
       )}
