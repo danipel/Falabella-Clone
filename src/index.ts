@@ -1,7 +1,7 @@
 import "reflect-metadata";
 import "dotenv/config"
 import app from "./app";
-import {AppDataSource} from "./db";
+import { AppDataSource } from "./db";
 import { seedDatabase } from "./seed";
 
 async function main(){
@@ -10,7 +10,7 @@ async function main(){
         console.log("Database Connected...");
         // Nos aseguramos que la base de datos este inicializada antes de insertar los datos
         if(AppDataSource.isInitialized){
-            await seedDatabase();
+            //await seedDatabase();
         }
         app.listen(3000);
         console.log("Server is listeng on port, http://localhost:3000");

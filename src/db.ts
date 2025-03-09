@@ -6,6 +6,7 @@ import { Section } from "./entities/section";
 import { Subcategory } from "./entities/subcategory";
 import { SectionCategory } from "./entities/sectioncategory";
 import { CategorySubcategory } from "./entities/categorysubcategory";
+import { Product } from "./entities/product";
 
 dotenv.config();
 
@@ -16,7 +17,7 @@ export const AppDataSource = new DataSource({
     password: process.env.DB_PASS,
     port: Number(process.env.DB_PORT),
     database: process.env.DB_NAME,
-    entities: [User, Section, Category, Subcategory, SectionCategory, CategorySubcategory],
+    entities: [User, Section, Category, Subcategory, SectionCategory, CategorySubcategory, Product],
     logging : true,
     synchronize : true
 })

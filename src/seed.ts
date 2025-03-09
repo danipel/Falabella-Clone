@@ -530,6 +530,3 @@ export const seedDatabase = async () => {
         await AppDataSource.destroy();
     }
 };
-
-// Ejecuta la función si deseas llamarla directamente desde este archivo.
-// seedDatabase();
